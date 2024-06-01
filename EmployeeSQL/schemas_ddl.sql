@@ -1,5 +1,6 @@
 -- DROP TABLE IF EXISTS Department, Title, Employee, DepartmentEmployee, DepartmentManager, Salary;
 
+-- create tables without dependencies first
 create table Department (
 	dept_no varchar(4) primary key,
 	dept_name varchar(50) not null
@@ -10,6 +11,7 @@ create table Title (
 	title varchar(30) not null
 );
 
+-- then create tables with foreign key constraints
 create table Employee (
 	emp_no int primary key,
 	emp_title_id varchar(5) not null,
